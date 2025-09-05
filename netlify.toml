@@ -1,0 +1,7 @@
+[build]
+  command = "npm run build"
+  publish = "build"   # wala "dist" 7asab project
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
