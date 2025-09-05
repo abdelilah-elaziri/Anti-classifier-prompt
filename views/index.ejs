@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="light-theme">
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">Anti classifier prompt</h1>
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <div class="hero-section">
+                <h1 class="hero-title">Safe Prompt Generator</h1>
+                <p class="hero-subtitle">Built by <%= creator %></p>
+                <p class="hero-description">
+                    This tool rewrites AI prompts using advanced linguistic techniques to bypass filters while preserving creativity.
+                </p>
+            </div>
+
+            <div class="tool-section">
+                <form class="prompt-form" id="promptForm">
+                    <div class="form-group">
+                        <label for="apiKey" class="form-label">
+                            Your Gemini API Key 
+                            <a href="https://aistudio.google.com/app/apikey" target="_blank" class="api-link">(Get one here)</a>
+                        </label>
+                        <div class="password-input-wrapper">
+                            <input type="password" id="apiKey" name="apiKey" class="form-input" required>
+                            <button type="button" class="password-toggle" id="passwordToggle" aria-label="Toggle password visibility">
+                                <span class="eye-icon">👁️</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">AI Target Model Type</label>
+                        <div class="tabs" id="modelTabs">
+                            <button type="button" class="tab active" data-model="text">
+                                Text (ChatGPT, etc.)
+                            </button>
+                            <button type="button" class="tab" data-model="image">
+                                Image (Midjourney, etc.)
+                            </button>
+                        </div>
+                        <input type="hidden" id="modelType" name="modelType" value="text">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="originalPrompt" class="form-label">Your Original Prompt</label>
+                        <textarea id="originalPrompt" name="originalPrompt" class="form-textarea" placeholder="Your Original Prompt" rows="4" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        <span class="btn-text">Vibe Check My Prompt</span>
+                        <span class="loading-spinner" id="loadingSpinner"></span>
+                    </button>
+                </form>
+
+                <div class="result-section" id="resultSection" style="display: none;">
+                    <h3 class="result-title">Safe Prompt Generated:</h3>
+                    <div class="result-content" id="resultContent"></div>
+                    <button type="button" class="copy-btn" id="copyBtn">Copy to Clipboard</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-text">Made with ❤️ by <%= creator %></p>
+        </div>
+    </footer>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
