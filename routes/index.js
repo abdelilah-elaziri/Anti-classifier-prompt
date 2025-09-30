@@ -4,7 +4,7 @@ const router = express.Router();
 // Home page route
 router.get('/', (req, res) => {
     res.render('index', { 
-        title: 'Anti classifier prompt - Safe Prompt Generator',
+        title: 'Vibe Codes - Safe Prompt Generator',
         creator: 'Abdelilah ELAZIRI'
     });
 });

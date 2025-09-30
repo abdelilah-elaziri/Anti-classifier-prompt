@@ -1,7 +1,7 @@
 {
-  "name": "anti-classifier-prompt",
+  "name": "vibe-codes",
   "version": "1.0.0",
-  "description": "Safe Prompt Generator - Anti classifier prompt by Abdelilah ELAZIRI",
+  "description": "Safe Prompt Generator - Vibe Codes by Abdelilah ELAZIRI",
   "main": "app.js",
   "private": true,
   "scripts": {

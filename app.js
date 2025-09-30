@@ -20,7 +20,7 @@ app.use('/api', require('./routes/api'));
 
 // Start server
 app.listen(PORT, () => {
-    console.log(`Anti classifier prompt server running on http://localhost:${PORT}`);
+    console.log(`Vibe Codes server running on http://localhost:${PORT}`);
 });
 
 module.exports = app;
